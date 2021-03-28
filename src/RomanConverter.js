@@ -10,6 +10,9 @@ const RomanConverter = () => {
         if(arabic === 0){
             setRoman("none")
         }
+        else if(arabic > 4999){
+            setRoman("try something below 5000")
+        }
         else{
             setRoman(toRoman(arabic))
         }
