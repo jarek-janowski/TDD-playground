@@ -1,13 +1,18 @@
 import toRoman from './toRoman'
 
 describe('toRoman()', () => {
-    it('converts 1 to I', () => {
-        expect(toRoman(1)).toEqual("I")
-    });
-    it('converts 5 to V', () => {
-        expect(toRoman(5)).toEqual("V")
-    });
-    it('does not convert 0 to any roman number', () => {
-        expect(toRoman(0)).toEqual("none")
+    it.each([
+        [1, "I"],
+        [2, "II"],
+        [3, "III"],
+        [4, "IV"],
+        [5, "V"],
+        [10, "X"],
+        [19, "XIX"],
+        [39, "XXXIX"],
+        [40, "XL"]
+    ])
+    ('converts %d to %s', (arabic, expectedRoman) => {
+        expect(toRoman(arabic)).toEqual(expectedRoman)
     });
 });

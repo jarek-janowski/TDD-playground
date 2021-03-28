@@ -15,6 +15,13 @@ describe('<RomanConverter />', () => {
             getByText('Roman: none')
         }).not.toThrow();
     });
+    it('does not convert 0 to any roman number', () => {
+        const { getByLabelText, getByText } = render(<RomanConverter />)
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "0"}});
+        expect(() => {
+            getByText('Roman: none')
+        }).not.toThrow();
+    });
     it.skip('converts 2019 to MMXIX', () => {
         const { getByLabelText, getByText } = render(<RomanConverter />)
         fireEvent.change(getByLabelText(/arabic/i), {target: {value: "2019"}});

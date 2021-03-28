@@ -7,9 +7,13 @@ const RomanConverter = () => {
 
     const handleChange = (e) =>{
         const arabic = e.target.value;
-        setRoman(toRoman(arabic))
+        if(arabic === 0){
+            setRoman("none")
+        }
+        else{
+            setRoman(toRoman(arabic))
+        }
     }
-
     return (
         <>
             <label>Arabic: <input onChange={handleChange} type="number"></input></label>
