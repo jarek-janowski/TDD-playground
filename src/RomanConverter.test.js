@@ -15,18 +15,11 @@ describe('<RomanConverter />', () => {
             getByText('Roman: none')
         }).not.toThrow();
     });
-    it('converts 1 to I', () => {
+    it.skip('converts 2019 to MMXIX', () => {
         const { getByLabelText, getByText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "1"}});
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "2019"}});
         expect(() => {
-            getByText('Roman: I')
-        }).not.toThrow();
-    });
-    it('converts 5 to V', () => {
-        const { getByLabelText, getByText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "5"}});
-        expect(() => {
-            getByText('Roman: V')
+            getByText('Roman: MMXIX')
         }).not.toThrow();
     });
 });

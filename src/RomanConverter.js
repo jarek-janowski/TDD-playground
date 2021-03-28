@@ -1,15 +1,13 @@
 import { useState } from 'react';
+import toRoman from './toRoman'
+
 
 const RomanConverter = () => {
     const [roman, setRoman] = useState(null)
 
     const handleChange = (e) =>{
         const arabic = e.target.value;
-        let roman = "I"
-        if(arabic == 5){
-            roman = "V"
-        }
-        setRoman(roman)
+        setRoman(toRoman(arabic))
     }
 
     return (
