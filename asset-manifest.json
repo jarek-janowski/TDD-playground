@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/TDD-playground/static/css/main.139e34d6.chunk.css",
+    "main.js": "/TDD-playground/static/js/main.60fa9ec7.chunk.js",
+    "main.js.map": "/TDD-playground/static/js/main.60fa9ec7.chunk.js.map",
+    "runtime-main.js": "/TDD-playground/static/js/runtime-main.94283358.js",
+    "runtime-main.js.map": "/TDD-playground/static/js/runtime-main.94283358.js.map",
+    "static/js/2.e7dcbcd9.chunk.js": "/TDD-playground/static/js/2.e7dcbcd9.chunk.js",
+    "static/js/2.e7dcbcd9.chunk.js.map": "/TDD-playground/static/js/2.e7dcbcd9.chunk.js.map",
+    "index.html": "/TDD-playground/index.html",
+    "static/css/main.139e34d6.chunk.css.map": "/TDD-playground/static/css/main.139e34d6.chunk.css.map",
+    "static/js/2.e7dcbcd9.chunk.js.LICENSE.txt": "/TDD-playground/static/js/2.e7dcbcd9.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/TDD-playground/static/media/roman-numeral.cb000ab7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94283358.js",
+    "static/js/2.e7dcbcd9.chunk.js",
+    "static/css/main.139e34d6.chunk.css",
+    "static/js/main.60fa9ec7.chunk.js"
+  ]
+}
