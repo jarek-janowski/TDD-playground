@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import toRoman from './toRoman'
+import './RomanConverter.css'
 
 
 const RomanConverter = () => {
@@ -10,18 +11,24 @@ const RomanConverter = () => {
         if(arabic === 0){
             setRoman("none")
         }
-        else if(arabic > 4999){
-            setRoman("try something below 5000")
+        else if(arabic > 3999){
+            setRoman("try something below 4000")
         }
         else{
             setRoman(toRoman(arabic))
         }
     }
     return (
-        <>
-            <label>Arabic: <input onChange={handleChange} type="number"></input></label>
-            <h1>Roman: {roman ? roman : "none"}</h1>
-        </>
+        <section className="converter">
+            <h1 className="converter__heading">Roman Converter</h1>
+            <span className="converter__subheading">(1-3999)</span>
+            <label className="converter__label">Arabic: 
+                <input className="converter__input" onChange={handleChange} type="number"/>
+            </label>
+            <p className="converter__show-result">Result: 
+                <span>{roman ? roman : "none"}</span>
+            </p>
+        </section>
     );
 }
 

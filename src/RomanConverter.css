@@ -1,0 +1,75 @@
+.converter{
+    width: 400px;
+    padding: 16px;
+    background:  rgba(0, 0, 0, 0.8);
+    color: #F4E8C1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.converter__heading{
+    font-size: 32px;
+    margin: 0 0 0 0;
+    text-align: center;
+}
+.converter__input{
+    margin-left: 8px;
+    background: rgba(159, 126, 105, 0.5);
+    border: 1px solid #F4E8C1;;
+    border-radius: 5px;
+    outline: none;
+    color: #F4E8C1;
+    padding: 4px 8px;
+    margin-top: 8px;
+    font-size: 20px;
+    
+}
+
+.converter__label{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.converter__show-result{
+    /* display: block; */
+    margin: 16px 0 0;
+    font-size: 24px;
+}
+
+.converter__show-result > span {
+    color: #9F7E69;
+}
+
+.converter__subheading{
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 490px){
+    .converter{
+        width: 280px;
+        padding: 12px;
+    }
+    .converter__heading{
+        font-size: 28px;
+    }
+    .converter__input{
+        width: 100%;
+        margin-top: 4px;
+        font-size: 16px;
+    }
+    
+    .converter__label{
+        font-size: 18px;
+    }
+    
+    .converter__show-result{
+        margin: 16px 0 0;
+        font-size: 18px;
+    }
+}

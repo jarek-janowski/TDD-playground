@@ -1,4 +1,4 @@
-import { clenaup, fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import RomanConverter from './RomanConverter'
 
 describe('<RomanConverter />', () => {
@@ -10,30 +10,30 @@ describe('<RomanConverter />', () => {
         }).not.toThrow();
     });
     it('shows no roman by default', () => {
-        const { getByText} = render(<RomanConverter />)
+        const { getByText, getByLabelText, getByRole} = render(<RomanConverter />)
         expect(() => {
-            getByText('Roman: none')
+            getByText('none')
         }).not.toThrow();
     });
     it('does not convert 0 to any roman number', () => {
         const { getByLabelText, getByText } = render(<RomanConverter />)
         fireEvent.change(getByLabelText(/arabic/i), {target: {value: "0"}});
         expect(() => {
-            getByText('Roman: none')
+            getByText('none')
         }).not.toThrow();
     });
     it('converts 2019 to MMXIX', () => {
         const { getByLabelText, getByText } = render(<RomanConverter />)
         fireEvent.change(getByLabelText(/arabic/i), {target: {value: "2019"}});
         expect(() => {
-            getByText('Roman: MMXIX')
+            getByText('MMXIX')
         }).not.toThrow();
     });
-    it('does not convert 5000+ to any roman number', () => {
+    it('does not convert 4000+ to any roman number', () => {
         const { getByLabelText, getByText } = render(<RomanConverter />)
-        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "5000"}});
+        fireEvent.change(getByLabelText(/arabic/i), {target: {value: "4000"}});
         expect(() => {
-            getByText('Roman: try something below 5000')
+            getByText('try something below 4000')
         }).not.toThrow();
     });
 });
