@@ -42,6 +42,7 @@
 
 .converter__show-result > span {
     color: #9F7E69;
+    margin: 0 0 0 8px;
 }
 
 .converter__subheading{

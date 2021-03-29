@@ -25,7 +25,7 @@ const RomanConverter = () => {
             <label className="converter__label">Arabic: 
                 <input className="converter__input" onChange={handleChange} type="number"/>
             </label>
-            <p className="converter__show-result">Result: 
+            <p className="converter__show-result">Result:  
                 <span>{roman ? roman : "none"}</span>
             </p>
         </section>
